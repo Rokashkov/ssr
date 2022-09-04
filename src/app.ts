@@ -3,7 +3,6 @@ import path from 'path'
 
 const app = express()
 
-const __dirname = path.resolve()
 const __dist = path.resolve(__dirname, '/..', '/..', '/dist')
 
 app.use(express.static(path.resolve(__dist)))
