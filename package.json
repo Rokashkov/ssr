@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec ts-node src/index.ts",
 	"config": "./node_modules/.bin/pm2 install typescript",
-    "prod": "cross-env NODE_ENV=production pm2 start src/index.ts --name server"
+    "prod": "cross-env NODE_ENV=production pm2 start src/index.ts --name api"
   },
   "author": "",
   "license": "ISC",
