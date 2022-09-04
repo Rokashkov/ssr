@@ -8,7 +8,7 @@ const __dist = path.resolve(__dirname, '..', '..', 'dist')
 app.use(express.static(path.resolve(__dist, 'project-name')))
 
 app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dist, 'project-name', 'index.html'))
+	res.render('index')
 })
 
 export default app
