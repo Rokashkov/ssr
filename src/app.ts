@@ -5,6 +5,7 @@ const app = express()
 
 const __dist = path.resolve(__dirname, '..', '..', 'dist')
 
+app.use(express.static(path.resolve(__dist)))
 app.use(express.static(path.resolve(__dist, 'project-name')))
 
 app.get('*', (req, res) => {
