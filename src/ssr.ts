@@ -6,4 +6,4 @@ require('@babel/register')({
     configFile: path.resolve( __dirname, '../babel.config.json' ),
 })
 
-require('./express.js')
+require('./index.ts')
