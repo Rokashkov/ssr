@@ -1,3 +1,5 @@
+/// <reference path="assets.d.ts" />
+
 require('ignore-styles')
 
 require('@babel/register')({
