@@ -7,11 +7,10 @@ import { App } from '../apps/react-scratch/src/App'
 
 const app = express()
 
-const __dist = path.resolve(__dirname, 'apps')
+const __dist = path.resolve(__dirname, 'apps', 'apps')
 
-app.use(express.static(path.resolve(__dist, 'project-name')))
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
 	fs.readFile(path.resolve(__dist, 'project-name', 'index.html'), 'utf-8', (err, data) => {
 		if (err) {
 			console.log(err)
@@ -19,7 +18,8 @@ app.get('*', (req, res) => {
 		}
 		res.send(data.replace('<div id="root"></div>', ReactDOM.renderToString(<App/>)))
 	})
-	res.sendFile(path.resolve(__dist, 'project-name', 'index.html'))
 })
+
+app.use(express.static(path.resolve(__dist, 'project-name')))
 
 export default app
