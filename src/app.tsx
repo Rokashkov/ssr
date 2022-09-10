@@ -7,7 +7,7 @@ import { App } from '../apps/react-scratch/src/App'
 
 const app = express()
 
-const __dist = path.resolve(__dirname, 'apps', 'dist')
+const __dist = path.resolve(__dirname, '..', 'apps', 'dist')
 
 
 app.get('/', (req, res) => {
