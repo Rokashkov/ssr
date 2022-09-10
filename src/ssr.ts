@@ -1,8 +1,8 @@
-const path = require( 'path' )
+const path = require('path')
 
-require( 'ignore-styles' )
+require('ignore-styles')
 
-require( '@babel/register')({
+require('@babel/register')({
     configFile: path.resolve( __dirname, '../babel.config.json' ),
 })
 
