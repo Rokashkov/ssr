@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec ts-node src/index.ts",
+    "dev": "cross-env NODE_ENV=development nodemon --exec ts-node src/ssr.ts",
     "config": "./node_modules/.bin/pm2 install typescript",
     "prod": "cross-env NODE_ENV=production pm2 start src/index.ts --name dispenser --watch",
     "ssr": "cross-env NODE_ENV=production pm2 start src/ssr.ts --name dispenser --watch"
