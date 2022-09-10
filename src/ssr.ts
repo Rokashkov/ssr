@@ -1,9 +1,10 @@
-const path = require('path')
-
 require('ignore-styles')
 
 require('@babel/register')({
-    configFile: path.resolve( __dirname, '../babel.config.json' ),
+	presets: [
+		'@babel/preset-env',
+		'@babel/preset-react'
+	]
 })
 
 require('./index.ts')
