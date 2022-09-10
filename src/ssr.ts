@@ -1,11 +1,9 @@
-/// <reference path="./assets.d.ts" />
+const path = require( 'path' )
 
-import 'ignore-styles'
-import babelregister from '@babel/register'
+require( 'ignore-styles' )
 
-babelregister({
-	ignore: [/(node_module)/],
-	presets: ['@babel/preset-env', '@babel/preset-react']
+require( '@babel/register')({
+    configFile: path.resolve( __dirname, '../babel.config.json' ),
 })
 
-import './index'
+require('./express.js')
